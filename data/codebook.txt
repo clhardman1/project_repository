@@ -1,0 +1,42 @@
+## Codebook for Rugby Analysis Project
+
+## Description of Data
+
+'international_rugby_fixtures_dataset.csv'
+contains data on every fixture played between the top 10/tier 1 rugby union nations from 1871 until 2023. 
+The data was collated from a range of Wikipedia webpages on the history of fixtures between each country and the other nine.
+It was available on Kaggle via the link https://www.kaggle.com/datasets/lylebegbie/international-rugby-union-results-from-18712022/data, with the author being user Lyle Begbie. 
+It was directly downloadable as a .csv file to be read into RStudio. 
+The columns includede in the dataset are:
+### Date - date of the match in yyyy/mm/dd. 
+### home_team - home team country
+### away_team - away team country
+### home_score - home score at full-time
+### away_score - away score at full-time
+### competition - the tournament name 
+### stadium - name of the stadium where the fixture was played
+### city - the city or town where the fixture was played
+### country - the country where the fixture was played
+### neutral - whether the fixture was played at a neutral ground with TRUE if it was, and FALSE if it was not
+### world_cup - whether the fixture was part of a Rugby World Cup tournament
+
+## Description of Dataframes and Variables 
+
+### data1 - the raw, unedited dataframe imported as a .csv file.
+### data - a dataframe constructed from:
+      removing fixtures before 1995/08/26, values of 'TRUE' for world_cup, 'TRUE' for neutral, 
+      columns competition, neutral and world_cup,
+      adding columns home_win and away_win with values of 'Yes' if true and 'No' if false
+### home_win_counts - a dataframe with a column named home_team that contains all ten countries and a column of home_wins where the values represent the amount of 'Yes' from the home_win column in the dataframe data.
+                    - this became a new dataframe when the dataframe away_win_counts away_wins column was added to the home_win_counts one. 
+### away_win_counts - a dataframe with a column named away_team that contains all ten countries and a column of away_wins where the values represent the amount of 'Yes' from the away_win column in the dataframe data. 
+### final_data - the home_win_counts column renamed once the away_win_counts away_wins column had been added to it. 
+### final_data_long - the dataframe used for the visualisations. a reshaped final_data dataframe, from a wide to long format so it is more suitable for producing the visualisation. 
+### p - the first visualisation
+
+### label_colours - contains the colour codes for each x axis category (each country).
+### specific_date - a variable created to allow the removal of any fixtures before 1995/08/26. 
+
+## Missing Values
+
+Missing values in the raw dataframe were assigned an 'NA'. For this analysis, there were no missing values and no further action was needed. 
