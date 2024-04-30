@@ -15,7 +15,9 @@ README.md - this file with an overview of the project
 
 data_analysis_project.Rproj - a shortcut to open the project directly
 
-index.html - the website for this project
+230170357.Rmd - rmarkdown file 
+
+230170357.html - link to website
 
 
 Folders:
@@ -25,3 +27,5 @@ data - contains the raw datafile "international_rugby_fixtures_dataset.csv and t
 figures - contains the visualisations
 
 script - contains the main code to run the entire project
+
+
