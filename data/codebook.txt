@@ -33,6 +33,7 @@ The columns includede in the dataset are:
 ### final_data - the home_win_counts column renamed once the away_win_counts away_wins column had been added to it. 
 ### final_data_long - the dataframe used for the visualisations. a reshaped final_data dataframe, from a wide to long format so it is more suitable for producing the visualisation. 
 ### p - the first visualisation
+### p2 - the plotly visualisation
 
 ### label_colours - contains the colour codes for each x axis category (each country).
 ### specific_date - a variable created to allow the removal of any fixtures before 1995/08/26. 
